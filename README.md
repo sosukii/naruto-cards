@@ -7,3 +7,5 @@ Default codnition:
 
 Click on Naruto button, see effects:
 ![image](https://user-images.githubusercontent.com/65328736/213261678-14087578-4b63-4c8a-ace2-cb2e753d46bc.png)
+
+If you pressed two buttons at one time, third button will be disabled. :)
