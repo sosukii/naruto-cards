@@ -5,6 +5,9 @@ const cardsNaruto = Array.from(document.querySelectorAll(".card--naruto"));
 const cardsSasuke = Array.from(document.querySelectorAll(".card--sasuke"));
 const cardsSakura = Array.from(document.querySelectorAll(".card--sakura"));
 
+let countCard = 0;
+let btnWithoutActiveClass;
+
 function removeBlur() {
   Array.from(cards.children).forEach((card) => card.classList.remove("blur"));
 }
@@ -47,6 +50,34 @@ function checkClass() {
   }
 }
 
+function disabledIfTwoBtnsPressed() {
+  let countBtnWithActiveClass = 0;
+  Array.from(btns.children).forEach((btn) => {
+    if (btn.classList.contains("btn--active")) {
+      countBtnWithActiveClass += 1;
+    }
+  });
+
+  if (countBtnWithActiveClass < 2) {
+    Array.from(btns.children).forEach((btn) => {
+      if (btn.disabled) {
+        btn.disabled = false;
+      }
+    });
+  } else {
+    let isOnlyOneBtnHasActiveClass = false;
+
+    Array.from(btns.children).forEach((btn) => {
+      if (!btn.classList.contains("btn--active")) {
+        btnWithoutActiveClass = btn;
+      }
+    });
+
+    btnWithoutActiveClass.disabled = !btnWithoutActiveClass.disabled;
+  }
+}
+
 btns.addEventListener("click", addBlur);
 btns.addEventListener("click", showTargetCard);
 btns.addEventListener("click", checkClass);
+btns.addEventListener("click", disabledIfTwoBtnsPressed);
