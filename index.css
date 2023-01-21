@@ -68,6 +68,21 @@ body {
   cursor: pointer;
   opacity: 1;
 }
+.btn:active {
+  background-color: #499a18;
+  border: 1px solid #499a18;
+}
+.btn[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.btn--active {
+  color: #fff;
+  background-color: #e06733;
+}
 
 .blur {
   filter: blur(2px);
