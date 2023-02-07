@@ -1,5 +1,5 @@
 ## Liks to project:
-- <a href="https://rolling-scopes-school.github.io/sosukii-JSFEPRESCHOOL2022Q4/plants/" target="_blanc">Deploy</a>
+- <a href="https://sosukii.github.io/naruto-cards/" target="_blanc">Deploy</a>
 - <a href="https://codepen.io/honeybunnyhhhhhhhhh/pen/JjBrXPQ" target="_blanc">CodePen</a>
 
 # naruto-cards
